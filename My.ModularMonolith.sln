@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Solution Items", "0 - S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Module A", "1 - Module A", "{3A4C6FF1-FD91-45E3-846E-F11261A701B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.Api", "My.ModularMonolith.Api\My.ModularMonolith.Api.csproj", "{72B430A6-28CF-4FB0-876B-0EFA8DC10D8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.Api", "src\My.ModularMonolith.Api\My.ModularMonolith.Api.csproj", "{72B430A6-28CF-4FB0-876B-0EFA8DC10D8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Module B", "2 - Module B", "{380F5E71-BD69-4897-9677-A6FCF95485C0}"
 EndProject

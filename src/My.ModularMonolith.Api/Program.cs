@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.FeatureManagement;
 using My.ModularMonolith.Api.Extensions;
 

@@ -11,8 +11,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\My.ModularMonolith.MyAModule.Api\My.ModularMonolith.MyAModule.Api.csproj" />
-      <ProjectReference Include="..\src\My.ModularMonolith.MyBModule.Api\My.ModularMonolith.MyBModule.Api.csproj" />
+      <ProjectReference Include="..\My.ModularMonolith.MyAModule.Api\My.ModularMonolith.MyAModule.Api.csproj" />
+      <ProjectReference Include="..\My.ModularMonolith.MyBModule.Api\My.ModularMonolith.MyBModule.Api.csproj" />
     </ItemGroup>
 
 </Project>
