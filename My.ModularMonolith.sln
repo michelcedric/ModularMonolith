@@ -1,8 +1,41 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyAModule.Api", "src\My.ModularMonolith.MyAModule.Api\My.ModularMonolith.MyAModule.Api.csproj", "{3758F3B7-97D3-412E-9FD7-2B39633B391D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Solution Items", "0 - Solution Items", "{B50E5179-53BE-41EB-84DC-0E337F3C5A4C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Module A", "1 - Module A", "{3A4C6FF1-FD91-45E3-846E-F11261A701B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.Api", "My.ModularMonolith.Api\My.ModularMonolith.Api.csproj", "{72B430A6-28CF-4FB0-876B-0EFA8DC10D8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Module B", "2 - Module B", "{380F5E71-BD69-4897-9677-A6FCF95485C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyBModule.Api", "src\My.ModularMonolith.MyBModule.Api\My.ModularMonolith.MyBModule.Api.csproj", "{747CD97F-DD8A-44AD-AB62-24FBCCD3C982}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3758F3B7-97D3-412E-9FD7-2B39633B391D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3758F3B7-97D3-412E-9FD7-2B39633B391D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3758F3B7-97D3-412E-9FD7-2B39633B391D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3758F3B7-97D3-412E-9FD7-2B39633B391D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72B430A6-28CF-4FB0-876B-0EFA8DC10D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B430A6-28CF-4FB0-876B-0EFA8DC10D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B430A6-28CF-4FB0-876B-0EFA8DC10D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B430A6-28CF-4FB0-876B-0EFA8DC10D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747CD97F-DD8A-44AD-AB62-24FBCCD3C982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747CD97F-DD8A-44AD-AB62-24FBCCD3C982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747CD97F-DD8A-44AD-AB62-24FBCCD3C982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747CD97F-DD8A-44AD-AB62-24FBCCD3C982}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3758F3B7-97D3-412E-9FD7-2B39633B391D} = {3A4C6FF1-FD91-45E3-846E-F11261A701B9}
+		{747CD97F-DD8A-44AD-AB62-24FBCCD3C982} = {380F5E71-BD69-4897-9677-A6FCF95485C0}
 	EndGlobalSection
 EndGlobal

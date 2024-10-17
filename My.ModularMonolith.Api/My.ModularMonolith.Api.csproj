@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\src\My.ModularMonolith.MyAModule.Api\My.ModularMonolith.MyAModule.Api.csproj" />
+      <ProjectReference Include="..\src\My.ModularMonolith.MyBModule.Api\My.ModularMonolith.MyBModule.Api.csproj" />
+    </ItemGroup>
+
+</Project>

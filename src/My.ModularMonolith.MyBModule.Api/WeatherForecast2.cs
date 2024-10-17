@@ -1,6 +1,6 @@
-namespace My.ModularMonolith.A;
+namespace My.ModularMonolith.MyBModule.Api;
 
-public class WeatherForecast
+public class WeatherForecast2
 {
     public DateOnly Date { get; set; }
 
