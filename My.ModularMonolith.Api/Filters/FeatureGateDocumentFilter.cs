@@ -7,7 +7,7 @@ namespace My.ModularMonolith.Api.Filters;
 public class FeatureGateDocumentFilter : IDocumentFilter
 {
     private readonly IFeatureManager _featureManager;
-
+    
     public FeatureGateDocumentFilter(IFeatureManager featureManager)
     {
         _featureManager = featureManager;
