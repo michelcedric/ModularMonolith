@@ -1,10 +1,12 @@
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.FeatureManagement;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace My.ModularMonolith.Api.Filters;
 
-public class FeatureGateDocumentFilter : IDocumentFilter
+[ExcludeFromCodeCoverage]
+internal class FeatureGateDocumentFilter : IDocumentFilter
 {
     private readonly IFeatureManager _featureManager;
     

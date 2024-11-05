@@ -33,4 +33,11 @@ public class WeatherForecastController : ControllerBase
             })
             .ToArray());
     }
+
+    [HttpDelete]
+    [ProducesResponseType(typeof(void), 200)]
+    public IActionResult Delete()
+    {
+        return Ok();
+    }
 }

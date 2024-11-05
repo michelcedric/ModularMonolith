@@ -1,5 +1,6 @@
 using Microsoft.FeatureManagement;
 using My.ModularMonolith.Api.Extensions;
+using My.ModularMonolith.Api.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,7 @@ builder.AddModuleSwaggerGen();
 
 builder.Services.AddMvc(options =>
 {
- 
+    options.Filters.Add(typeof(GlobalExceptionFilters));
 }).ConfigureApplicationPartManager(a =>
 {
     a.CleanModulesPart(builder,"My.ModularMonolith.");

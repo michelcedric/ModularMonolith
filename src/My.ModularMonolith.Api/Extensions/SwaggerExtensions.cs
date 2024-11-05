@@ -93,6 +93,8 @@ public static class SwaggerExtensions
                 });
 
                 options.DocumentFilter<FeatureGateDocumentFilter>();
+                options.SchemaFilter<NullabilitySchemaFilter>();
+                options.OperationFilter<GeneralExceptionOperationFilter>();
             });
         }
 
