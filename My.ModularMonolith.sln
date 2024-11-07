@@ -21,11 +21,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{607E52AD
 	ProjectSection(SolutionItems) = preProject
 		cliensdkgenerator.ps1 = cliensdkgenerator.ps1
 		start.ps1 = start.ps1
+		runDockerDB.ps1 = runDockerDB.ps1
+		ef.ps1 = ef.ps1
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyAModule.Client.SDK", "src\My.ModularMonolith.MyAModule.Client.SDK\My.ModularMonolith.MyAModule.Client.SDK.csproj", "{48EF4D43-1772-4F73-A1CB-8A75E00CAEA5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyBModule.Client.SDK", "src\My.ModularMonolith.MyBModule.Client.SDK\My.ModularMonolith.MyBModule.Client.SDK.csproj", "{705826DA-9A0F-420F-921A-4C9112D71D52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyAModule.Domain", "src\My.ModularMonolith.MyAModule.Domain\My.ModularMonolith.MyAModule.Domain.csproj", "{A82D076B-F75D-4127-B5E5-C89F2F78995F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyAModule.Infrastructure", "src\My.ModularMonolith.MyAModule.Infrastructure\My.ModularMonolith.MyAModule.Infrastructure.csproj", "{FA7DB624-E692-4EB0-AC99-A651196BCD61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +63,14 @@ Global
 		{705826DA-9A0F-420F-921A-4C9112D71D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{705826DA-9A0F-420F-921A-4C9112D71D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{705826DA-9A0F-420F-921A-4C9112D71D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A82D076B-F75D-4127-B5E5-C89F2F78995F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A82D076B-F75D-4127-B5E5-C89F2F78995F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A82D076B-F75D-4127-B5E5-C89F2F78995F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A82D076B-F75D-4127-B5E5-C89F2F78995F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7DB624-E692-4EB0-AC99-A651196BCD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7DB624-E692-4EB0-AC99-A651196BCD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7DB624-E692-4EB0-AC99-A651196BCD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7DB624-E692-4EB0-AC99-A651196BCD61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3758F3B7-97D3-412E-9FD7-2B39633B391D} = {3A4C6FF1-FD91-45E3-846E-F11261A701B9}
@@ -64,5 +78,7 @@ Global
 		{607E52AD-4B38-418D-BF61-EF2F8DA09E76} = {B50E5179-53BE-41EB-84DC-0E337F3C5A4C}
 		{48EF4D43-1772-4F73-A1CB-8A75E00CAEA5} = {3A4C6FF1-FD91-45E3-846E-F11261A701B9}
 		{705826DA-9A0F-420F-921A-4C9112D71D52} = {380F5E71-BD69-4897-9677-A6FCF95485C0}
+		{A82D076B-F75D-4127-B5E5-C89F2F78995F} = {3A4C6FF1-FD91-45E3-846E-F11261A701B9}
+		{FA7DB624-E692-4EB0-AC99-A651196BCD61} = {3A4C6FF1-FD91-45E3-846E-F11261A701B9}
 	EndGlobalSection
 EndGlobal

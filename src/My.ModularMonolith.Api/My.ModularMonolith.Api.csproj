@@ -7,12 +7,17 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\My.ModularMonolith.Common\My.ModularMonolith.Common.csproj" />
       <ProjectReference Include="..\My.ModularMonolith.MyAModule.Api\My.ModularMonolith.MyAModule.Api.csproj" />
+      <ProjectReference Include="..\My.ModularMonolith.MyAModule.Infrastructure\My.ModularMonolith.MyAModule.Infrastructure.csproj" />
       <ProjectReference Include="..\My.ModularMonolith.MyBModule.Api\My.ModularMonolith.MyBModule.Api.csproj" />
     </ItemGroup>
 
