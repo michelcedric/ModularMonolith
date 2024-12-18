@@ -21,7 +21,7 @@ public static class Extensions
         else
         {
             builder.Services.AddDbContext<MyAModuleContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("ModuleAConnection"),
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ModuleADatabaseConnection"),
                     s => { s.MigrationsHistoryTable(Constants.Database.MigrationTable, Constants.Database.Schema); }));
         }
 

@@ -19,6 +19,7 @@
       <ProjectReference Include="..\My.ModularMonolith.MyAModule.Api\My.ModularMonolith.MyAModule.Api.csproj" />
       <ProjectReference Include="..\My.ModularMonolith.MyAModule.Infrastructure\My.ModularMonolith.MyAModule.Infrastructure.csproj" />
       <ProjectReference Include="..\My.ModularMonolith.MyBModule.Api\My.ModularMonolith.MyBModule.Api.csproj" />
+      <ProjectReference Include="..\My.ModularMonolith.MyBModule.Infrastructure\My.ModularMonolith.MyBModule.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

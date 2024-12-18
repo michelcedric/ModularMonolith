@@ -2,6 +2,7 @@ using Microsoft.FeatureManagement;
 using My.ModularMonolith.Api.Extensions;
 using My.ModularMonolith.Api.Filters;
 using My.ModularMonolith.MyAModule.Infrastructure;
+using My.ModularMonolith.MyBModule.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 
 builder.AddModuleSwaggerGen();
 builder.AddModuleAInfrastructure();
+builder.AddModuleBInfrastructure();
 
 builder.Services.AddMvc(options =>
 {

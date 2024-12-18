@@ -1,4 +1,4 @@
-$modules = @('MyAModule')
+$modules = @('MyAModule','MyBModule')
 $baseNameSpace = "My.ModularMonolith"
 
 function Show-Menu-Select-Context

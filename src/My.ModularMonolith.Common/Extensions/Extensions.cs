@@ -19,7 +19,7 @@ public static class Extensions
     {
         var assembly = Assembly.GetCallingAssembly();
         var repositoryTypes = assembly.GetTypes()
-            .Where(t => t.Name.EndsWith("Repository") && t.IsClass && !t.IsAbstract);
+            .Where(t => t.Name.EndsWith("Repository") && t is { IsClass: true, IsAbstract: false });
 
         foreach (var implementationType in repositoryTypes)
         {
