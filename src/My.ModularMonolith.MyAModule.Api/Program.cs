@@ -1,9 +1,8 @@
-namespace My.ModularMonolith.MyAModule.Api
+namespace My.ModularMonolith.MyAModule.Api;
+
+public class Program
 {
-    public class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
