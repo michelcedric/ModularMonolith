@@ -12,7 +12,7 @@ using My.ModularMonolith.MyBModule.Infrastructure.Data;
 namespace My.ModularMonolith.MyBModule.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(MyBModuleContext))]
-    [Migration("20241218092559_Initial")]
+    [Migration("20241230100419_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -31,13 +31,12 @@ namespace My.ModularMonolith.MyBModule.Infrastructure.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

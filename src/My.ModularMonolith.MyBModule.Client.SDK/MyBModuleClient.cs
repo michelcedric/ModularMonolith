@@ -87,7 +87,7 @@ namespace My.ModularMonolith.MyBModule.Client.SDK
                 using (var request_ = new System.Net.Http.HttpRequestMessage())
                 {
                     request_.Method = new System.Net.Http.HttpMethod("GET");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("text/plain"));
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("text/json"));
 
                     var urlBuilder_ = new System.Text.StringBuilder();
                 
@@ -269,6 +269,171 @@ namespace My.ModularMonolith.MyBModule.Client.SDK
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum EdmContainerElementKind
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"None")]
+        None = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"EntitySet")]
+        EntitySet = 1,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"ActionImport")]
+        ActionImport = 2,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"FunctionImport")]
+        FunctionImport = 3,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Singleton")]
+        Singleton = 4,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum EdmExpressionKind
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"None")]
+        None = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"BinaryConstant")]
+        BinaryConstant = 1,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"BooleanConstant")]
+        BooleanConstant = 2,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DateTimeOffsetConstant")]
+        DateTimeOffsetConstant = 3,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DecimalConstant")]
+        DecimalConstant = 4,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"FloatingConstant")]
+        FloatingConstant = 5,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"GuidConstant")]
+        GuidConstant = 6,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"IntegerConstant")]
+        IntegerConstant = 7,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"StringConstant")]
+        StringConstant = 8,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DurationConstant")]
+        DurationConstant = 9,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Null")]
+        Null = 10,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Record")]
+        Record = 11,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Collection")]
+        Collection = 12,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Path")]
+        Path = 13,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"If")]
+        If = 14,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Cast")]
+        Cast = 15,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"IsOf")]
+        IsOf = 16,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"FunctionApplication")]
+        FunctionApplication = 17,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"LabeledExpressionReference")]
+        LabeledExpressionReference = 18,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Labeled")]
+        Labeled = 19,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"PropertyPath")]
+        PropertyPath = 20,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"NavigationPropertyPath")]
+        NavigationPropertyPath = 21,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DateConstant")]
+        DateConstant = 22,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"TimeOfDayConstant")]
+        TimeOfDayConstant = 23,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"EnumMember")]
+        EnumMember = 24,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"AnnotationPath")]
+        AnnotationPath = 25,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum EdmSchemaElementKind
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"None")]
+        None = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"TypeDefinition")]
+        TypeDefinition = 1,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Term")]
+        Term = 2,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Action")]
+        Action = 3,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"EntityContainer")]
+        EntityContainer = 4,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Function")]
+        Function = 5,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum EdmTypeKind
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"None")]
+        None = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Primitive")]
+        Primitive = 1,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Entity")]
+        Entity = 2,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Complex")]
+        Complex = 3,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Collection")]
+        Collection = 4,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"EntityReference")]
+        EntityReference = 5,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Enum")]
+        Enum = 6,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"TypeDefinition")]
+        TypeDefinition = 7,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Untyped")]
+        Untyped = 8,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Path")]
+        Path = 9,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class GenericError
     {
         [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -279,6 +444,238 @@ namespace My.ModularMonolith.MyBModule.Client.SDK
 
         [Newtonsoft.Json.JsonProperty("errorId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Guid ErrorId { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmDirectValueAnnotationsManager
+    {
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmEntityContainer
+    {
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("schemaElementKind", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public EdmSchemaElementKind SchemaElementKind { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("namespace", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Namespace { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("elements", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<IEdmEntityContainerElement> Elements { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmEntityContainerElement
+    {
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("containerElementKind", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public EdmContainerElementKind ContainerElementKind { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("container", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public IEdmEntityContainer Container { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmExpression
+    {
+        [Newtonsoft.Json.JsonProperty("expressionKind", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public EdmExpressionKind ExpressionKind { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmModel
+    {
+        [Newtonsoft.Json.JsonProperty("schemaElements", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<IEdmSchemaElement> SchemaElements { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("vocabularyAnnotations", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<IEdmVocabularyAnnotation> VocabularyAnnotations { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("referencedModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<IEdmModel> ReferencedModels { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("declaredNamespaces", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<string> DeclaredNamespaces { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("directValueAnnotationsManager", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public IEdmDirectValueAnnotationsManager DirectValueAnnotationsManager { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("entityContainer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public IEdmEntityContainer EntityContainer { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmSchemaElement
+    {
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("schemaElementKind", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public EdmSchemaElementKind SchemaElementKind { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("namespace", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Namespace { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmTerm
+    {
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("schemaElementKind", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public EdmSchemaElementKind SchemaElementKind { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("namespace", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Namespace { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("type", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public IEdmTypeReference Type { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("appliesTo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string AppliesTo { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("defaultValue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string DefaultValue { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmType
+    {
+        [Newtonsoft.Json.JsonProperty("typeKind", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public EdmTypeKind TypeKind { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmTypeReference
+    {
+        [Newtonsoft.Json.JsonProperty("isNullable", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool IsNullable { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("definition", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public IEdmType Definition { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmVocabularyAnnotatable
+    {
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class IEdmVocabularyAnnotation
+    {
+        [Newtonsoft.Json.JsonProperty("qualifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Qualifier { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("term", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public IEdmTerm Term { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("target", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public IEdmVocabularyAnnotatable Target { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("value", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public IEdmExpression Value { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("usesDefault", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool UsesDefault { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ODataEntitySetInfo
+    {
+        [Newtonsoft.Json.JsonProperty("typeAnnotation", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public ODataTypeAnnotation TypeAnnotation { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("url", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Uri Url { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("title", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Title { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ODataFunctionImportInfo
+    {
+        [Newtonsoft.Json.JsonProperty("typeAnnotation", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public ODataTypeAnnotation TypeAnnotation { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("url", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Uri Url { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("title", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Title { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ODataServiceDocument
+    {
+        [Newtonsoft.Json.JsonProperty("typeAnnotation", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public ODataTypeAnnotation TypeAnnotation { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("entitySets", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<ODataEntitySetInfo> EntitySets { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("singletons", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<ODataSingletonInfo> Singletons { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("functionImports", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<ODataFunctionImportInfo> FunctionImports { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ODataSingletonInfo
+    {
+        [Newtonsoft.Json.JsonProperty("typeAnnotation", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public ODataTypeAnnotation TypeAnnotation { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("url", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Uri Url { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("title", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Title { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ODataTypeAnnotation
+    {
+        [Newtonsoft.Json.JsonProperty("typeName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string TypeName { get; set; }
 
     }
 

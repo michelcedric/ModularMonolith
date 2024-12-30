@@ -5,14 +5,9 @@ using My.ModularMonolith.MyBModule.Domain.Entities;
 namespace My.ModularMonolith.MyBModule.Infrastructure.Data;
 
 [ExcludeFromCodeCoverage]
-public class MyBModuleContext : DbContext
+public class MyBModuleContext(DbContextOptions<MyBModuleContext> options) : DbContext(options)
 {
     public DbSet<ModelB> ModelAs => Set<ModelB>();
-
-    public MyBModuleContext(DbContextOptions<MyBModuleContext> options)
-        : base(options)
-    {
-    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

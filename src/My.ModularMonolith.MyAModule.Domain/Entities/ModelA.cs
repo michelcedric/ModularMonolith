@@ -17,7 +17,7 @@ public class ModelA : BaseEntity<Guid>
         };
     }
     
-    internal ModelA()
-    {
-    }
+    // internal ModelA()
+    // {
+    // }
 }

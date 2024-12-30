@@ -12,7 +12,7 @@ using My.ModularMonolith.MyAModule.Infrastructure.Data;
 namespace My.ModularMonolith.MyAModule.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(MyAModuleContext))]
-    [Migration("20241107200744_Initial")]
+    [Migration("20241230100405_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace My.ModularMonolith.MyAModule.Infrastructure.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);

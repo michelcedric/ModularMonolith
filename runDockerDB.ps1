@@ -16,3 +16,5 @@ else
 {
     Write-Warning "OS not supported : Some environment variables may not be set"
 }
+
+Write-Warning "Restart your IDE to use the new environment variable" 

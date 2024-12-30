@@ -4,9 +4,5 @@ using My.ModularMonolith.MyAModule.Domain.Interfaces.Repositories;
 
 namespace My.ModularMonolith.MyAModule.Infrastructure.Data.Repositories;
 
-public class ModelARepository : EfRepository<ModelA, Guid, MyAModuleContext>, IModelARepository
-{
-    public ModelARepository(MyAModuleContext dbContext) : base(dbContext)
-    {
-    }
-}
+public class ModelARepository(MyAModuleContext dbContext)
+    : EfRepository<ModelA, Guid, MyAModuleContext>(dbContext), IModelARepository;

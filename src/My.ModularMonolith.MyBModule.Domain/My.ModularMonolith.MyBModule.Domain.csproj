@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Interfaces\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\My.ModularMonolith.Common\My.ModularMonolith.Common.csproj" />
     </ItemGroup>
 

@@ -7,19 +7,13 @@ using My.ModularMonolith.Common.Domain.Interfaces.Repositories;
 namespace My.ModularMonolith.Common.Infrastructure.Data.Repositories;
 
 [ExcludeFromCodeCoverage]
-public abstract class EfRepository<TEntity, TKey, TDbContext> :
-    IAsyncRepository<TEntity, TKey> where TEntity : BaseEntity<TKey>
+public abstract class EfRepository<TEntity, TKey, TDbContext>(TDbContext dbContext) :
+    IAsyncRepository<TEntity, TKey>
+    where TEntity : BaseEntity<TKey>
     where TDbContext : DbContext
     where TKey : notnull
 {
-    private readonly DbSet<TEntity> _dbSet;
-    private readonly TDbContext _dbContext;
-
-    protected EfRepository(TDbContext dbContext)
-    {
-        _dbSet = dbContext.Set<TEntity>();
-        _dbContext = dbContext;
-    }
+    private readonly DbSet<TEntity> _dbSet = dbContext.Set<TEntity>();
 
     public async Task<TEntity?> GetByIdAsync(TKey id, CancellationToken cancellationToken)
     {
@@ -56,7 +50,7 @@ public abstract class EfRepository<TEntity, TKey, TDbContext> :
     public virtual async Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken)
     {
         await _dbSet.AddAsync(entity, cancellationToken);
-        await _dbContext.SaveChangesAsync(cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
         return entity;
     }
 
@@ -69,25 +63,25 @@ public abstract class EfRepository<TEntity, TKey, TDbContext> :
     public async Task<IEnumerable<TEntity>> AddAsync(IList<TEntity> entities, CancellationToken cancellationToken)
     {
         await _dbSet.AddRangeAsync(entities, cancellationToken);
-        await _dbContext.SaveChangesAsync(cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
         return entities.ToList();
     }
 
     public async Task UpdateAsync(TEntity entity, CancellationToken cancellationToken)
     {
-        _dbContext.Set<TEntity>().Update(entity);
-        await _dbContext.SaveChangesAsync(cancellationToken);
+        dbContext.Set<TEntity>().Update(entity);
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public async Task UpdateAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken)
     {
-        _dbContext.Set<TEntity>().UpdateRange(entities);
-        await _dbContext.SaveChangesAsync(cancellationToken);
+        dbContext.Set<TEntity>().UpdateRange(entities);
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public async Task<bool> ExecuteDeleteAsync(TKey id, CancellationToken cancellationToken)
     {
-        if (!_dbContext.Database.IsRelational())
+        if (!dbContext.Database.IsRelational())
         {
             var entity = await GetByIdAsync(id, cancellationToken);
             if (entity != null)
@@ -105,7 +99,7 @@ public abstract class EfRepository<TEntity, TKey, TDbContext> :
 
     public async Task<bool> ExecuteDeleteAsync(TKey[] ids, CancellationToken cancellationToken)
     {
-        if (!_dbContext.Database.IsRelational())
+        if (!dbContext.Database.IsRelational())
         {
             var entities = (await FindByAsync((e) => ids.Contains(e.Id), cancellationToken)).ToArray();
             if (entities.Length != ids.Length)
@@ -124,13 +118,13 @@ public abstract class EfRepository<TEntity, TKey, TDbContext> :
     public virtual async Task DeleteAsync(TEntity entity, CancellationToken cancellationToken)
     {
         _dbSet.Remove(entity);
-        await _dbContext.SaveChangesAsync(cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public async Task DeleteAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken)
     {
         _dbSet.RemoveRange(entities);
-        await _dbContext.SaveChangesAsync(cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public IQueryable<TEntity> GetAllAsQueryable()

@@ -7,12 +7,20 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MediatR" Version="12.4.1" />
+        <PackageReference Include="Microsoft.AspNetCore.OData" Version="9.1.1" />
         <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="4.0.0" />
+        <PackageReference Include="Microsoft.OData.Edm" Version="8.2.2" />
+        <PackageReference Include="Microsoft.OData.ModelBuilder" Version="2.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="Properties\launchSettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\My.ModularMonolith.MyBModule.Domain\My.ModularMonolith.MyBModule.Domain.csproj" />
     </ItemGroup>
 
 </Project>

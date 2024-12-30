@@ -8,5 +8,5 @@ public abstract class BaseEntity<TKey> where TKey : notnull
     /// <summary>
     /// The unique identifier of an entity
     /// </summary>
-    public virtual TKey Id { get; set; }
+    public virtual required TKey Id { get; init; }
 }
