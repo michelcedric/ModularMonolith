@@ -6,6 +6,15 @@ namespace My.ModularMonolith.Common.Extensions;
 
 public static class Extensions
 {
+    public static bool AppSeedOnStartup(this IHostApplicationBuilder builder)
+    {
+        var seedOnStartup = false;
+        if (builder.Configuration["SeedOnStartup"] != null)
+        {
+            seedOnStartup = bool.Parse(builder.Configuration["SeedOnStartup"] ?? "");
+        }
+        return seedOnStartup;
+    }
     public static bool AppUseOnlyInMemoryDatabase(this IHostApplicationBuilder builder)
     {
         var useOnlyInMemoryDatabase = false;

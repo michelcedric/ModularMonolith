@@ -1,5 +1,5 @@
 {
-  "runtime": "Net80",
+  "runtime": "Net90",
   "defaultVariables": null,
   "documentGenerator": {
     "fromDocument": {
@@ -41,7 +41,7 @@
       "useRequestAndResponseSerializationSettings": false,
       "serializeTypeInformation": false,
       "queryNullValue": "",
-      "className": "WorkPreparationClient",
+      "className": "MyBModuleClient",
       "operationGenerationMode": "SingleClientFromOperationId",
       "additionalNamespaceUsages": [],
       "additionalContractNamespaceUsages": [],

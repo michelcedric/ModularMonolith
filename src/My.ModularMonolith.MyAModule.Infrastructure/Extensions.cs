@@ -27,4 +27,16 @@ public static class Extensions
 
         builder.Services.AddRepositories();
     }
+
+    public static async Task ApplyModuleASeedData(this IHost app, IHostApplicationBuilder builder)
+    {
+        if (builder.AppSeedOnStartup())
+        {
+            using (var scope = app.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<MyAModuleContext>();
+                await DbInitializer.Run(context);
+            }
+        }
+    }
 }

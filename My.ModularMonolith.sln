@@ -5,11 +5,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Solution Items", "0 - Solution Items", "{B50E5179-53BE-41EB-84DC-0E337F3C5A4C}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		.config\dotnet-tools.json = .config\dotnet-tools.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Module A", "1 - Module A", "{3A4C6FF1-FD91-45E3-846E-F11261A701B9}"
 	ProjectSection(SolutionItems) = preProject
-		Program.cs = Program.cs
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.Api", "src\My.ModularMonolith.Api\My.ModularMonolith.Api.csproj", "{72B430A6-28CF-4FB0-876B-0EFA8DC10D8A}"
@@ -39,6 +39,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyBModule.Domain", "src\My.ModularMonolith.MyBModule.Domain\My.ModularMonolith.MyBModule.Domain.csproj", "{4628955C-9377-41CD-9F09-C0B6883ADA77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyBModule.Infrastructure", "src\My.ModularMonolith.MyBModule.Infrastructure\My.ModularMonolith.MyBModule.Infrastructure.csproj", "{D32288A0-8B05-4F8B-BDA8-7F8BF0C2A866}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{175085DC-3884-4550-B094-8B2F55EFCABD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.ModularMonolith.MyAModule.Api.IntegrationTests", "tests\My.ModularMonolith.MyAModule.Api.IntegrationTests\My.ModularMonolith.MyAModule.Api.IntegrationTests.csproj", "{F3550461-721A-4320-819C-C87221A21AAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +90,10 @@ Global
 		{D32288A0-8B05-4F8B-BDA8-7F8BF0C2A866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D32288A0-8B05-4F8B-BDA8-7F8BF0C2A866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D32288A0-8B05-4F8B-BDA8-7F8BF0C2A866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3550461-721A-4320-819C-C87221A21AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3550461-721A-4320-819C-C87221A21AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3550461-721A-4320-819C-C87221A21AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3550461-721A-4320-819C-C87221A21AAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3758F3B7-97D3-412E-9FD7-2B39633B391D} = {3A4C6FF1-FD91-45E3-846E-F11261A701B9}
@@ -97,5 +105,7 @@ Global
 		{FA7DB624-E692-4EB0-AC99-A651196BCD61} = {3A4C6FF1-FD91-45E3-846E-F11261A701B9}
 		{4628955C-9377-41CD-9F09-C0B6883ADA77} = {380F5E71-BD69-4897-9677-A6FCF95485C0}
 		{D32288A0-8B05-4F8B-BDA8-7F8BF0C2A866} = {380F5E71-BD69-4897-9677-A6FCF95485C0}
+		{175085DC-3884-4550-B094-8B2F55EFCABD} = {3A4C6FF1-FD91-45E3-846E-F11261A701B9}
+		{F3550461-721A-4320-819C-C87221A21AAA} = {175085DC-3884-4550-B094-8B2F55EFCABD}
 	EndGlobalSection
 EndGlobal

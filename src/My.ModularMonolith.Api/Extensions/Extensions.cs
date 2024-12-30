@@ -5,6 +5,13 @@ namespace My.ModularMonolith.Api.Extensions;
 
 public static class Extensions
 {
+    public static ConfigurationManager AddConfigurationFile(this ConfigurationManager configurationManager, string path)
+    {
+        var configPath = Path.Combine(AppContext.BaseDirectory, path);
+        configurationManager.AddJsonFile(configPath, true, false);
+        return configurationManager;
+
+    }
     public static ModuleDefinition[] GetEnabledModules(this IFeatureManager featureManager)
     {
         var modules = featureManager.GetFeatureNamesAsync().ToBlockingEnumerable().Where(f => f.StartsWith(ModuleDefinition.ModulePrefix))
