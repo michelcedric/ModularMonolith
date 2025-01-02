@@ -35,6 +35,7 @@ public static class SwaggerExtensions
 
             builder.Services.AddSwaggerGen((options) =>
             {
+                options.SupportNonNullableReferenceTypes();
                 options.UseAllOfToExtendReferenceSchemas();
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {

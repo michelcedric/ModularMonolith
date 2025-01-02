@@ -9,6 +9,7 @@ namespace My.ModularMonolith.Api.Filters;
 /// Necessary to correctly manage nullability property on from form data
 /// </summary>
 [ExcludeFromCodeCoverage]
+// ReSharper disable once ClassNeverInstantiated.Global
 internal class NullabilitySchemaFilter : ISchemaFilter
 {
     public void Apply(OpenApiSchema schema, SchemaFilterContext context)

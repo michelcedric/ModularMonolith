@@ -9,15 +9,12 @@ public class ModelB :  BaseEntity<Guid>
 
     public static ModelB Create(string name, int year)
     {
-        return new ModelB
-        {
-            Id = Guid.NewGuid(),
-            Title = name,
-            Year = year
-        };
+        return new ModelB(name, year);
     }
     
-    // internal ModelB()
-    // {
-    // }
+    private ModelB(string title, int year) : base(Guid.NewGuid())
+    {
+        Title = title;
+        Year = year;
+    }
 }

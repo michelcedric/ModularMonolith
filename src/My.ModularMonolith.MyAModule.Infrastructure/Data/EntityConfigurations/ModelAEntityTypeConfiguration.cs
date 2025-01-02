@@ -9,5 +9,6 @@ public class ModelAEntityTypeConfiguration : IEntityTypeConfiguration<ModelA>
     public void Configure(EntityTypeBuilder<ModelA> builder)
     {
         builder.ToTable("ModelAs", Constants.Database.Schema);
+        builder.HasKey(x => x.Id);
     }
 }

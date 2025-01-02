@@ -1,5 +1,6 @@
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
+using My.ModularMonolith.Common.Domain.Entities;
 using My.ModularMonolith.MyBModule.Domain.Entities;
 
 namespace My.ModularMonolith.MyBModule.Api.Controllers.OData;
